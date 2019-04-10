@@ -20,4 +20,9 @@ app.use(
   proxy({ target: 'http://localhost:3001', changeOrigin: true })
 );
 
+app.use(
+  '/books/:id/reviews',
+  proxy({ target: 'http://localhost:3003', changeOrigin: true })
+);
+
 module.exports = app;

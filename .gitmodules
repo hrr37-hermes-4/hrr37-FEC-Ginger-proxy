@@ -7,3 +7,6 @@
 [submodule "module/hrr37-FEC-Ginger-service"]
 	path = module/hrr37-FEC-Ginger-service
 	url = https://github.com/hrr37-hermes-4/hrr37-FEC-Ginger-service.git
+[submodule "modules/hannah-service"]
+	path = modules/hannah-service
+	url = https://github.com/hrr37-hermes-4/hannah-service.git
