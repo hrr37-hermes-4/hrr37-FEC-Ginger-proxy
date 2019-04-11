@@ -21,6 +21,12 @@ app.use(
 );
 
 app.use(
+  '/books/:id/info',
+  proxy({ target: 'http://localhost:3002', changeOrigin: true })
+);
+
+
+app.use(
   '/books/:id/reviews',
   proxy({ target: 'http://localhost:3003', changeOrigin: true })
 );
