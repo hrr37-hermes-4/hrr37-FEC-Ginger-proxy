@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={style.wrapper}>
-        <Author />
+        <Author bookId={this.props.match.params.id} />
       </div>
     );
   }

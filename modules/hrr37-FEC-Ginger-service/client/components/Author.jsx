@@ -6,12 +6,16 @@ class Author extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      authors: [],
+      authors: []
     };
   }
 
   componentDidMount() {
-    fetch('/books/1/authors/1')
+    fetch(`/title/${this.props.bookId}`)
+      .then(res => res.json())
+      .then((title) => {
+        return fetch(`/books/${this.props.bookId}/authors/${title[0].author_id}`)
+      })
       .then(res => res.json())
       .then((data) => {
         this.setState({
@@ -54,7 +58,7 @@ class Author extends React.Component {
               {' '}
               {item.name}
             </div>
-            <Books author={item.name} />
+            <Books bookId={this.props.bookId} authorId={item.id} author={item.name} />
           </div>
         ))}
       </div>
