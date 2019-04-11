@@ -11,7 +11,7 @@ class Author extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`/title/${this.props.bookId}`)
+    fetch(`/books/${this.props.bookId}/authors/title`)
       .then(res => res.json())
       .then((title) => {
         return fetch(`/books/${this.props.bookId}/authors/${title[0].author_id}`)

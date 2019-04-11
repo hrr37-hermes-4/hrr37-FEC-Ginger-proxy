@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/books/:id', express.static(path.join(__dirname, '../public')));
 
-app.get('/title/:id', async(req, res) => {
+app.get('/books/:id/authors/title', async(req, res) => {
   const title = await db.getBook(req.params.id);
   res.json(title);
 });
