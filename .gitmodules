@@ -10,3 +10,6 @@
 [submodule "modules/hannah-service"]
 	path = modules/hannah-service
 	url = https://github.com/hrr37-hermes-4/hannah-service.git
+[submodule "modules/kazshige-service"]
+	path = modules/kazshige-service
+	url = https://github.com/hrr37-hermes-4/kazshige-service.git
