@@ -1,0 +1,12 @@
+[submodule "modules/andrew-fec-service"]
+	path = modules/andrew-fec-service
+	url = https://github.com/hrr37-hermes-4/andrew-fec-service.git
+[submodule "modules/hrr37-FEC-Ginger-service"]
+	path = modules/hrr37-FEC-Ginger-service
+	url = https://github.com/hrr37-hermes-4/hrr37-FEC-Ginger-service.git
+[submodule "module/hrr37-FEC-Ginger-service"]
+	path = module/hrr37-FEC-Ginger-service
+	url = https://github.com/hrr37-hermes-4/hrr37-FEC-Ginger-service.git
+[submodule "modules/hannah-service"]
+	path = modules/hannah-service
+	url = https://github.com/hrr37-hermes-4/hannah-service.git
