@@ -35,7 +35,7 @@ app.get('/books/:id/info', async (req, res) => {
   }
 });
 
-app.get('/books/:id/users', async (req, res) => {
+app.get('/books/:id/info/users', async (req, res) => {
   let id = req.params.id;
   try {
     if(!/^\d+$/.test(id)) {
@@ -50,7 +50,7 @@ app.get('/books/:id/users', async (req, res) => {
 
 });
 
-app.get('/books/:id/image', async (req, res) => {
+app.get('/books/:id/info/image', async (req, res) => {
   let id = parseInt(req.params.id);
   if(!/^\d+$/.test(id)) {
     return res.status(404).json();
@@ -64,7 +64,7 @@ app.get('/books/:id/image', async (req, res) => {
   }
 });
 
-app.get('/books/:id/ratings', async (req, res) => {
+app.get('/books/:id/info/ratings', async (req, res) => {
   const id = req.params.id;
 
   if(!/^\d+$/.test(id)) {
@@ -79,7 +79,7 @@ app.get('/books/:id/ratings', async (req, res) => {
   }
 });
 
-app.get('/books/:id/reviews', async (req, res) => {
+app.get('/books/:id/info/reviews', async (req, res) => {
   const id = req.params.id;
 
   if(!/^\d+$/.test(id)) {
@@ -95,7 +95,7 @@ app.get('/books/:id/reviews', async (req, res) => {
   }
 });
 
-app.put('/books/:id/users/:userId/readStatus', async (req, res) => {
+app.put('/books/:id/info/users/:userId/readStatus', async (req, res) => {
   const id = parseInt(req.params.id, 10);
   const userId = parseInt(req.params.userId, 10);
   const { status } = req.body;
@@ -120,7 +120,7 @@ app.put('/books/:id/users/:userId/readStatus', async (req, res) => {
   }
 });
 
-app.get('/books/:id/users/:userId/readStatus',  async(req, res)=> {
+app.get('/books/:id/info/users/:userId/readStatus',  async(req, res)=> {
   const id = req.params.id;
   const userId = req.params.userId;
 
@@ -159,7 +159,7 @@ app.post('/users/:userId/shelf', async (req, res) => {
 });
 
 // Adding a shelf to bookShelf
-app.post('/books/:id/users/:userId/shelf/:shelfId', async (req, res) => {
+app.post('/books/:id/info/users/:userId/shelf/:shelfId', async (req, res) => {
   const { id, shelfId, userId } = req.params;
 
   if(!/^\d+$/.test(id) || !/^\d+$/.test(shelfId) || !/^\d+$/.test(userId)) {
